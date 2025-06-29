@@ -5,6 +5,8 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <div className='flex justify-center items-center flex-col min-h-screen'>
+      <App />
+    </div>
   </StrictMode>,
 )

@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Package-lock (for win vs mac diff in deps)
+package-lock.jsonAdd comment
