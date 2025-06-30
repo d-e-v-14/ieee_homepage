@@ -3,16 +3,20 @@ import bg from "../assets/background.png";
 import logo from "../assets/ieee_logo.png";
 import halftone from "../assets/dots.png"; 
 import NavBar from "../components/NavBar";
-
+import ScrollFloat from "../components/scrollfloat";
+import TearScetion from "../components/tearsection"
 const HeroSection = () => {
   return (
     <div className="relative w-screen h-screen text-white overflow-hidden">
+      
+  <NavBar />
+
 <div
   className="absolute inset-0 max-w-screen min-h-screen bg-contain bg-center z-0 filter brightness-[60%]"
   style={{ backgroundImage: `url(${bg})` }}
 ></div>
 
-  <NavBar />
+
 
       {Array.from({ length: 6 }).map((_, i) => (
         <div
@@ -30,8 +34,6 @@ const HeroSection = () => {
       ))}
 
 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-20"></div>
-
-
 
       <div className="relative z-30 h-full flex flex-col justify-center items-start pl-16">
          <img
@@ -54,10 +56,12 @@ const HeroSection = () => {
         >
         CODE. CREATE. CATALYZE.
         </h2>
-
+        
       </div>
     </div>
   );
 };
 
-export default HeroSection;
+export default HeroSection; 
+
+

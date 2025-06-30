@@ -7,7 +7,7 @@ import ContactButton from "./navButtons/ContactButton";
 
 export default function NavBar() {
   return (
-<div className="absolute top-6 right-10 z-50 flex gap-10">
+<div className="fixed top-6 right-10 z-50 flex gap-6">
   <HomeButton />
   <AboutButton />
   <EventsButton />
