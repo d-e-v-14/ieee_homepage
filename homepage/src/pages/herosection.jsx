@@ -10,21 +10,20 @@ const HeroSection = ({ scrollProgress }) => {
   const scale = useTransform(scrollProgress, [0, 0.3], [1, 1.1]);
 
   return (
-    <motion.div
-      className="relative w-full h-screen text-white overflow-hidden"
-      style={{ opacity: fadeOut, scale }}
-    >
+    <motion.div className="relative w-full h-screen text-white overflow-hidden">
       <NavBar />
 
+      {/* Background image stays fixed and visible */}
       <div
         className="absolute inset-0 bg-cover bg-center filter brightness-[60%]"
         style={{ backgroundImage: `url(${bg})` }}
       />
 
+      {/* Only halftone overlays fade away */}
       {Array.from({ length: 6 }).map((_, i) => (
         <motion.div
           key={i}
-          className="absolute top-0 bottom-0 z-10 opacity-60"
+          className="absolute top-0 bottom-0 z-10"
           style={{
             left: `${(i * 100) / 6}%`,
             width: "16.66%",
@@ -37,17 +36,20 @@ const HeroSection = ({ scrollProgress }) => {
         />
       ))}
 
+      {/* Gradient stays visible */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-20" />
-      
+
       <div className="relative z-30 h-full flex flex-col justify-center items-start pl-16">
+        {/* Logo stays fixed */}
         <img
           src={logo}
           alt="IEEE Logo"
           className="fixed top-4 left-4 w-[14vw] h-auto max-w-[203px] min-w-[62px] object-contain z-50"
         />
 
+        {/* Heading fades away */}
         <motion.h1
-          style={{ fontFamily: 'Karantina' }}
+          style={{ fontFamily: 'Karantina', opacity: fadeOut }}
           className="font-normal text-[180px] leading-[100%] tracking-[-0.03em] text-white"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,8 +58,9 @@ const HeroSection = ({ scrollProgress }) => {
           IEEE-CS
         </motion.h1>
 
+        {/* Subheading fades away */}
         <motion.h2
-          style={{ fontFamily: 'Karantina', color: '#EF9E00' }}
+          style={{ fontFamily: 'Karantina', color: '#EF9E00', opacity: fadeOut }}
           className="font-normal text-[180px] leading-[100%] tracking-[-0.03em]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -65,8 +68,6 @@ const HeroSection = ({ scrollProgress }) => {
         >
           CODE. CREATE. CATALYZE.
         </motion.h2>
-
-
       </div>
     </motion.div>
   );

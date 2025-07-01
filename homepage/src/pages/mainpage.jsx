@@ -14,11 +14,11 @@ const MainPage = () => {
   return (
     <div className="bg-black">
       <div ref={containerRef} className="relative h-[202vh] overflow-hidden">
-        <div className="sticky top-0 h-screen w-screen z-10">
+        <div className="fixed top-0 h-screen w-screen z-10">
           <HeroSection scrollProgress={scrollYProgress} />
         </div>
 
-        <div className="sticky top-0 h-screen w-screen z-20">
+        <div className="relative top-170 h-screen w-screen z-20">
           <Boards scrollProgress={scrollYProgress} />
         </div>
 
