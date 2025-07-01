@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "framer-motion": "^12.20.1",
+    "framer-motion": "^12.22.0",
     "gsap": "^3.13.0"
   }
 }
