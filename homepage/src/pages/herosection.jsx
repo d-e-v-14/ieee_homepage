@@ -13,13 +13,13 @@ const HeroSection = ({ scrollProgress }) => {
     <motion.div className="relative w-full h-screen text-white overflow-hidden">
       <NavBar />
 
-      {/* Background image stays fixed and visible */}
+
       <div
         className="absolute inset-0 bg-cover bg-center filter brightness-[60%]"
         style={{ backgroundImage: `url(${bg})` }}
       />
 
-      {/* Only halftone overlays fade away */}
+
       {Array.from({ length: 6 }).map((_, i) => (
         <motion.div
           key={i}
@@ -36,18 +36,18 @@ const HeroSection = ({ scrollProgress }) => {
         />
       ))}
 
-      {/* Gradient stays visible */}
+
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-20" />
 
       <div className="relative z-30 h-full flex flex-col justify-center items-start pl-16">
-        {/* Logo stays fixed */}
+
         <img
           src={logo}
           alt="IEEE Logo"
           className="fixed top-4 left-4 w-[14vw] h-auto max-w-[203px] min-w-[62px] object-contain z-50"
         />
 
-        {/* Heading fades away */}
+  
         <motion.h1
           style={{ fontFamily: 'Karantina', opacity: fadeOut }}
           className="font-normal text-[180px] leading-[100%] tracking-[-0.03em] text-white"
@@ -58,7 +58,7 @@ const HeroSection = ({ scrollProgress }) => {
           IEEE-CS
         </motion.h1>
 
-        {/* Subheading fades away */}
+   
         <motion.h2
           style={{ fontFamily: 'Karantina', color: '#EF9E00', opacity: fadeOut }}
           className="font-normal text-[180px] leading-[100%] tracking-[-0.03em]"

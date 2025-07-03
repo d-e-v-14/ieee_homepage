@@ -5,7 +5,7 @@ import tornRight from "../assets/right-bg.png";
 
 const TearSection = ({ scrollProgress }) => {
   const leftX = useTransform(scrollProgress, [0.2, 0.65], ["0%", "-130%"]);
-  const rightX = useTransform(scrollProgress, [0.3, 0.65], ["0%", "100%"]);
+  const rightX = useTransform(scrollProgress, [0.3, 0.65], ["00%", "100%"]);
   const leftRotate = useTransform(scrollProgress, [0.3, 0.65], [0, -5]);
   const rightRotate = useTransform(scrollProgress, [0.3, 0.65], [0, 5]);
   const opacity = useTransform(scrollProgress, [0.25, 0.3, 0.65, 0.7], [0, 1, 1, 0]);
@@ -27,7 +27,7 @@ const TearSection = ({ scrollProgress }) => {
         src={tornRight}
         alt="Torn Right"
         className="absolute top-0 right-0 h-full object-cover"
-        style={{ x: rightX, rotate: rightRotate, width: "50vw", transformOrigin: "left center" }}
+        style={{ x: rightX, rotate: rightRotate, width: "80vw", transformOrigin: "left center" }}
       />
 
       <motion.div

@@ -43,7 +43,7 @@ const Boards = ({ scrollProgress }) => {
         >
           OUR STORY
         </motion.h1>
-    <NavBar />
+
         <img
           src={logo}
           alt="IEEE Logo"
